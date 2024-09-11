@@ -26,10 +26,10 @@ const myServer = http.createServer((req,res)=>{
         console.log(myUrl);
 
         switch(myUrl.pathname){
-            case '/' : res.end("Home page");
+            case '/api' : res.end("Home page");
             break
 
-            case '/about' : {
+            case '/api/about' : {
                 
                 const username = myUrl.query['myname']
                 console.log(username)
@@ -50,7 +50,7 @@ const myServer = http.createServer((req,res)=>{
 
 // PORT is like door
 
-myServer.listen(8000,()=>{  // handler function
+myServer.listen(5000,()=>{  // handler function
     console.log("Server Started...")
 })
 
